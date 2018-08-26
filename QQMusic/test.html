@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>百度一下</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <form action="https://y.qq.com/portal/search.html#page=1&searchid=1&remoteplace=txt.yqq.top&t=song&w=123" method="get">
+        <input type="text" name="w" />
+        <input type="submit" value="百度一下" />
+    </form>
+    
+    <input type="text" name="q" id="c" />
+    <input type="button" id="sou" value="搜索"></input>
+</body>
+
+<script type="text/javascript">
+	var sou = document.getElementById("sou");
+	sou.onclick = function(){
+		var c = document.getElementById("c").value;
+		var s = "https://y.qq.com/portal/search.html#page=1&searchid=1&remoteplace=txt.yqq.top&t=song&w=" + c;
+		location = s;
+	}
+</script>
+</html>

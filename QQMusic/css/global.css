@@ -1,0 +1,325 @@
+/*全局属性*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	min-width: 1366px;
+    /*overflow-y: scroll;*/
+   margin: 0 auto;
+   	font-family: poppin,Tahoma,Arial,微软雅黑,sans-serif;
+}
+#header, 
+#playlist_recommended,
+#new_music,
+#hot_recommended,
+#new_dish,
+#rank,
+#mv,
+#footer{
+	width: 1366px;
+	margin: 0 auto;
+}
+/*大div居中*/
+.location{
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+}
+/*背景图*/
+.all_bg{
+	background: url(../img/bg_detail.jpg) repeat-x;
+	
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+li{
+	list-style-type: none;
+}
+button {
+    cursor: pointer;
+}
+
+/*悬停变绿*/
+.hover_green:hover{
+	color: #31c27c;
+	cursor: pointer;
+}
+/*标题部分*/
+.content_title{
+	position: relative;
+	height: 114px;
+	width: 100%;
+}
+.content_title div{
+	position: absolute;
+	top: 45px;
+	height: 50px;
+	width: 100%;
+	background: url(../img/index_tit.png) no-repeat center;
+	/*background-position-y: -40px;*/
+}
+
+/*小的导航栏*/
+.s_nav{
+	height: 50px;
+}
+.s_nav ul{
+	width: 400px;
+	height: 50px;
+	padding-left: 50px;	
+	padding-bottom: 15px;
+	/*margin-right: -50px;*/
+	margin: 0 auto;
+}
+.s_nav li{
+	text-align: -webkit-match-parent;
+}
+.s_nav a{
+	margin-right: 50px;
+	font-size: 15px;
+}
+.s_nav li:first-child a{
+	color: #31c27c;
+}
+.s_nav a:hover{
+	color: #31c27c;
+}
+/*播放图标*/
+.play_song{
+	opacity: 0;
+	position: absolute;
+	display: block;
+	width: 70px;
+	height: 70px;
+	margin-top: 77px;
+	margin-left: 77px;
+	background-image: url(../img/cover_play.png);
+	transition-duration: .5s;
+}
+/*播放列表内容，1行5图*/
+.playlist_content{
+	display: none;
+}
+.playlist_content>div{
+	float: left;
+}
+.playlist_content>div>div:first-child{
+	position: relative;
+	cursor: pointer;
+	width: 224px;
+	height: 224px;
+	margin-right: 19px;
+	overflow: hidden;
+}
+.cover_mark{
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	filter: alpha(opacity=0);
+	-webkit-transition: opacity .5s;
+	transition: opacity .5s;
+}
+.playlist_content img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	image-rendering: optimizeQuality;
+	object-fit: cover;
+}
+.playlist_content>div a{
+	width: 224px;
+	margin-top: 19px;
+	font-size: 14px;
+	word-wrap:break-word;
+    word-break:break-all;
+    overflow: hidden;
+}
+.playlist_content>div a:hover{
+	color: #31c27c;
+	cursor: pointer;
+
+}
+.playlist_content>div>div:last-child{
+	width: 224px;
+	color: #B2B2B2;
+	font-size: 14px;
+	margin-top: 15px;
+}
+
+.playlist_content .new_dish_part3{
+	width: 224px;
+	color: #B2B2B2;
+	font-size: 14px;
+	margin-top: 0px;
+}
+
+/*四个点的底部*/
+.four_pointer_footer{
+	position: relative;
+	height: 38px;
+	text-align: center;
+}
+.four_pointer_footer div{
+	position: absolute;
+	height: 38px;
+	width: 200px;
+	padding-left: 50px;
+	margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0; 
+}
+.four_pointer_footer a{
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background-color: #E5E5E5;
+	margin-left: 25px;
+}
+.four_pointer_footer a:first-child{
+	background-color: #B2B2B2;
+}
+.four_pointer_footer a:hover{
+	background-color: #B2B2B2;
+}
+
+/*mv内容部分*/
+.mv_class>div{
+	position: relative;
+	width: 224px;
+	height: 231px;
+	float: left;
+	margin-right: 23px;
+}
+.mv_class>div:last-child{
+	margin-right: 0;
+}
+.mv_class>div>div:first-child{
+	position: relative;
+	width: 224px;
+	height: 127px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.mv_class>div>div:nth-child(2){
+	width: 224px;
+	height: 20px;
+	margin-top: 20px;
+	font-size: 15px;
+}
+.mv_class>div>div:nth-child(3) a{
+	position: absolute;
+	height: 20px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	color: #B2B2B2;
+	font-size: 14px;
+}
+.mv_class>div>div:nth-child(3) a:hover{
+	color: #31c27c;
+	cursor: pointer;
+}
+.mv_class>div>div:nth-child(3),
+.mv_class>div>div:last-child{
+	width: 224px;
+	height: 20px;
+}
+.mv_class>div>div:last-child div{
+	position: absolute;
+	width: 25px;
+	height: 14px;
+	background: url(../img/小图标.png);
+	background-position:-378px -18px;
+	margin-top: 5px;
+}
+.mv_class>div>div:last-child span{
+	font-size: 14px;
+	color: #B2B2B2;
+	margin-left: 25px;
+}
+
+/*底部图标*/
+.PC_version,
+.Mac_version,
+.Android_version,
+.iPhone_version,
+.allksong_version,
+.Super_Sound_version,
+.QPlay_version{
+	display: block;
+	margin: 0 29px 12px;
+	width: 48px;
+	height: 48px;
+	background-image: url(../img/footer.png);
+}
+.PC_version{
+	width: 37px;
+	background-position: -2px 0;
+}
+.PC_version:hover{
+	background-position: -2px -49px;	
+}
+.Mac_version{
+	width: 46px;
+	background-position: -92px 0;
+}
+.Mac_version:hover{
+	background-position: -92px -49px;	
+}
+.Android_version{
+	width: 37px;
+	background-position: -190px 0;
+}
+.Android_version:hover{
+	background-position: -190px -49px;	
+}
+.iPhone_version{
+	width: 34px;
+	background-position: -279px 0;
+}
+.iPhone_version:hover{
+	background-position: -279px -49px;	
+}
+.allksong_version{
+	width: 41px;
+	background-position: -370px 0;
+}
+.allksong_version:hover{
+	background-position: -370px -49px;	
+}
+.Super_Sound_version{
+	width: 37px;
+	background-position: -463px 0;
+}
+.Super_Sound_version:hover{
+	background-position: -463px -49px;	
+}
+.QPlay_version{
+	width: 40px;
+	background-position: -563px 0;
+}
+.QPlay_version:hover{
+	background-position: -563px -49px;	
+}
+
+/*合作链接中的链接*/
+.cooperate_link{
+	width: 354px;
+	height: 20px;
+	text-align: left;
+	border: 1px soild white;
+}
+.cooperate_link a{
+	display: block;
+	width: 90px;
+	margin-left: 23px;
+	text-align: left;
+	border: 1px soild white;
+}
+
+
